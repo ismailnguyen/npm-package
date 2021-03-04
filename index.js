@@ -50,7 +50,7 @@ function getUrlParameter(name) {
 }
 
 function init() {
-	var pkgName = getUrlParameter('pkg');
+	var pkgName = getUrlParameter('name');
 	var repoUrl = 'https://raw.githubusercontent.com/ismailnguyen/' + pkgName + '/master/';
 
 	fetchMetaData(repoUrl);
