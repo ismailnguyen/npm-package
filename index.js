@@ -6,9 +6,11 @@ function fetchReadme (repositoryUrl) {
 		var usageBlock = response.split('# Usage')[1];
 		
 		var rawCodeBlock = usageBlock.split('```')[1].split('\n');
+		var codeLanguage = rawCodeBlock[0];
 		rawCodeBlock.splice(0, 1);
 		var codeBlock = rawCodeBlock.join('\n');
-		
+		 
+		$('*[data-fill="usage_code_snippet"]').addClass('language-' + codeLanguage);
 		$('*[data-fill="usage_code_snippet"]').text(codeBlock);
 	})
 	.then(r => {
