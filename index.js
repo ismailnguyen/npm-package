@@ -3,7 +3,7 @@ function fetchReadme (repositoryUrl) {
 
 	$.get(readmeUrl)
 	.then(response => {
-		var usageBlock = response.split('## Usage')[1];
+		var usageBlock = response.split('# Usage')[1];
 		
 		var rawCodeBlock = usageBlock.split('```')[1].split('\n');
 		rawCodeBlock.splice(0, 1);
@@ -51,6 +51,12 @@ function getUrlParameter(name) {
 
 function init() {
 	var pkgName = getUrlParameter('name');
+	
+	if(!pkgName) {
+		location.href = 'https://www.ismailnguyen.com/work/npm-package';
+		return;
+	}
+	
 	var repoUrl = 'https://raw.githubusercontent.com/ismailnguyen/' + pkgName + '/master/';
 
 	fetchMetaData(repoUrl);
