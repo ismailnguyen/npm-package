@@ -19,7 +19,7 @@ You must have a `README.md` file at root of the repository with a `# Usage` sect
 Redirect the root of your Github Pages to the landing page generator like following code:
 
 ```html
-	<meta http-equiv="refresh" content="0;URL='https://www.ismailnguyen.com/npm-package/?name=<PACKAGE_NAME>'" />    
+	<meta http-equiv="refresh" content="0;URL='https://www.ismailnguyen.com/npm-package/?name=<PACKAGE_NAME>'" />
 ```
 
 Replace **<PACKAGE_NAME>** by the package name (which also corresponds to the repository name).
